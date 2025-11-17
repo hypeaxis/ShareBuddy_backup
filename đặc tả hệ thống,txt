@@ -1,0 +1,259 @@
+Web App Chia sẻ Tài liệu 
+ 
+Thành viên nhóm 14: 
+ 
+Họ và tên MSSV Email 
+Nguyễn Hải Anh 20225597 Anh.NH225597@sis.hust.edu.vn 
+Đỗ Tuấn Minh 20225741 Minh.DT225741@sis.hust.edu.vn 
+Vũ Minh Trí 20225940 tri.vm225940@sis.hust.edu.vn 
+Cao Đức Anh 20225781 Anh.CD225781@sis.hust.edu.vn 
+Nguyễn Mạnh Quân 20225758 Quan.NM225758@sis.hust.edu.vn 
+Lê Đình Quốc Huy 20225857 Huy.LDQ225857@sis.hust.edu.vn 
+ 
+Mô tả tổng quan dự án: 
+“Dự án Web App Chia sẻ Tài liệu” là một nền tảng trực tuyến cho phép sinh viên, giảng 
+viên và người học chia sẻ, tìm kiếm, tải xuống cũng như đánh giá các tài liệu học tập. 
+Ứng dụng cung cấp các chức năng chính như đăng ký/đăng nhập, tải lên và quản lý tài 
+liệu, tìm kiếm nâng cao theo trường học và môn học, đánh giá và bình luận tài liệu, đồng 
+thời tích hợp hệ thống điểm/credit khuyến khích người dùng đóng góp nội dung. Ngoài 
+ra, dự án còn hỗ trợ quản trị nội dung và người dùng thông qua Admin Panel, hệ thống 
+gợi ý tài liệu dựa trên hành vi, cùng các tính năng mở rộng như Q&A và chứng thực tác 
+giả nhằm tạo ra một cộng đồng học thuật chất lượng và đáng tin cậy. 
+1. Giới thiệu 
+● Tên hệ thống: Web App Chia sẻ Tài liệu 
+● Mục tiêu: 
+ Cho phép người dùng chia sẻ, tải xuống và quản lý tài liệu học tập. 
+○ Tạo cộng đồng trao đổi kiến thức giữa sinh viên và giảng viên. 
+○ Cung cấp nền tảng đánh giá chất lượng tài liệu, gợi ý tài liệu liên quan. 
+ 
+ 
+2. Phạm vi hệ thống 
+● Hệ thống sẽ chạy trên nền Web, hỗ trợ responsive (Desktop + Mobile). 
+● Người dùng có thể đăng ký, đăng nhập, tải lên, tìm kiếm, đánh giá và tải xuống tài 
+liệu. 
+● Có hệ thống phân quyền (User / Moderator / Admin). 
+● Có API để tích hợp với ứng dụng khác (tùy chọn). 
+3. Tác nhân (Actors) 
+Tác nhân Mô tả UC 
+Người dùng 
+(User) 
+Sinh viên/giảng viên muốn 
+chia sẻ/tải tài liệu 
+Tìm kiếm, xem, tải lên, tải 
+xuống, đánh giá tài liệu 
+Moderator Quản lý nội dung tài liệu vi 
+phạm 
+Duyệt/xóa tài liệu, quản lý báo 
+cáo 
+Admin Quản trị hệ thống Quản lý user, phân quyền, báo 
+cáo thống kê 
+Khách (Guest) Người chưa đăng nhập Tìm kiếm, xem tài liệu công 
+khai, đăng ký 
+API Client (tùy 
+chọn) 
+Hệ thống bên ngoài tích hợp Đọc dữ liệu qua API 
+ 
+4. Chức năng chính (Functional Requirements) 
+4.1 Quản lý người dùng 
+● Đăng ký / Đăng nhập (email, OAuth: Google, Facebook). 
+● Quản lý hồ sơ cá nhân (avatar, mô tả, trường học, chuyên ngành). 
+● Xem và chỉnh sửa thông tin cá nhân. 
+● Quản lý lịch sử tải xuống / tải lên. 
+ 
+4.2 Quản lý tài liệu 
+● Tải lên tài liệu (PDF, DOCX, PPTX...) kèm mô tả, tag, trường học, môn học. 
+● Tìm kiếm tài liệu theo từ khóa, tag, môn học, trường học. 
+● Xem chi tiết tài liệu (preview + metadata). 
+● Tải xuống tài liệu (có thể yêu cầu điểm / credit). 
+● Báo cáo tài liệu vi phạm. 
+● Quản lý quyền truy cập (public/private, premium/free). 
+4.3 Đánh giá và tương tác 
+● Đánh giá tài liệu (rating, comment). 
+● Hỏi đáp về tài liệu (Q&A). 
+● Theo dõi tác giả / người đăng tài liệu. 
+● Nhận gợi ý tài liệu liên quan (recommendation). 
+4.4 Đánh dấu tài liệu yêu thích 
+● Người dùng có thể “lưu” tài liệu để xem lại sau mà không cần tải xuống ngay 
+.4.5 Theo dõi tác giả (Follow Author) 
+● Khi theo dõi người đăng tài liệu, người dùng sẽ nhận thông báo khi có tài liệu mới. 
+4.6 Hệ thống điểm / credit  
+● Người dùng tải lên tài liệu để nhận credit. 
+● Dùng credit để tải tài liệu khác. 
+● Mua credit qua thanh toán online. 
+4.7 Quản trị (Admin Panel) 
+● Quản lý user, phân quyền. 
+● Duyệt tài liệu, xử lý báo cáo vi phạm. 
+● Quản lý thống kê lượt tải lên/tải xuống. 
+4.8 Tích hợp nâng cao (giá trị thêm) 
+● API cho phép hệ thống khác lấy danh mục tài liệu. 
+● Machine Learning gợi ý tài liệu theo hành vi người dùng. 
+● Hệ thống thông báo (notification) qua email hoặc in-app. 
+● Hệ thống “Verified Author” cho tài liệu chính thống. 
+ 
+5. Use Case Chính 
+Use Case Tác nhân Mô tả 
+Đăng ký/Đăng nhập User, Guest Người dùng tạo tài khoản hoặc đăng nhập 
+Tải lên tài liệu User Người dùng upload tài liệu kèm thông tin 
+Tìm kiếm tài liệu Guest, User Tìm kiếm theo từ khóa, tag, trường học, 
+môn học 
+Xem chi tiết tài liệu Guest, User Hiển thị thông tin tài liệu, preview 
+Tải xuống tài liệu User Tải tài liệu, trừ credit (nếu có) 
+Đánh giá & Bình 
+luận 
+User Đánh giá sao, viết bình luận về tài liệu 
+Đánh dấu tài liệu 
+yêu thích 
+(Bookmark) 
+User  
+Người dùng có thể “lưu” tài liệu để xem 
+lại sau mà không cần tải xuống ngay. 
+ 
+ 
+Theo dõi tác giả 
+(Follow Author) 
+User  
+Khi theo dõi người đăng tài liệu, người 
+dùng sẽ nhận thông báo khi có tài liệu 
+mới. 
+ 
+ 
+Hệ thống 
+Credit/Điểm thưởng 
+User Người dùng được cộng điểm khi tải lên, 
+bình luận hoặc đánh giá tài liệu; có thể 
+dùng điểm để tải tài liệu khác. 
+   
+Báo cáo tài liệu vi 
+phạm 
+User, 
+Moderator 
+Gửi báo cáo tài liệu vi phạm 
+Quản lý tài khoản User Sửa thông tin, xem lịch sử tải xuống 
+Quản trị hệ thống Admin Quản lý user, duyệt tài liệu, thống kê 
+6. Yêu cầu phi chức năng (Non-functional Requirements) 
+● Bảo mật: Xác thực OAuth 2.0, mã hóa mật khẩu (bcrypt). 
+● Hiệu năng: Tìm kiếm tài liệu <2 giây cho 100k bản ghi. 
+● Khả năng mở rộng: Thiết kế API RESTful. 
+● Khả năng sử dụng: Giao diện đơn giản, hỗ trợ mobile. 
+● Sao lưu và phục hồi: Backup dữ liệu hàng ngày. 
+ 
+7. Công nghệ sử dụng 
+Frontend: ReactJS + Bootstrap 
+● ReactJS là thư viện JavaScript phổ biến dùng để xây dựng giao diện người dùng động 
+và có khả năng tái sử dụng cao. React cho phép tách ứng dụng thành các component 
+độc lập, giúp việc phát triển, mở rộng và bảo trì trở nên dễ dàng hơn. 
+○ Trong dự án này, ReactJS sẽ được dùng để: 
+■ Xây dựng giao diện các trang như Trang chủ, Trang tìm kiếm, Trang 
+chi tiết tài liệu, Trang hồ sơ người dùng, Trang quản trị. 
+■ Giao tiếp với backend thông qua API RESTful. 
+● Bootstrap là framework CSS giúp xây dựng giao diện đẹp, chuẩn và responsive nhanh 
+chóng. 
+○ Bootstrap sẽ được kết hợp với React để tạo giao diện hiện đại, đồng nhất và 
+thân thiện với người dùng. 
+ 
+Backend: NodeJS 
+● NodeJS là môi trường chạy JavaScript phía server, cho phép xây dựng các ứng dụng 
+web hiệu năng cao, xử lý đồng thời nhiều yêu cầu (asynchronous). 
+○ Trong dự án này, NodeJS sẽ đóng vai trò là máy chủ API cung cấp dữ liệu cho 
+giao diện React thông qua các RESTful API endpoint, ví dụ: 
+■ /api/users – quản lý tài khoản người dùng 
+■ /api/documents – tải lên, tìm kiếm, tải xuống tài liệu 
+■ /api/reports – xử lý báo cáo vi phạm 
+○ NodeJS cũng sẽ tích hợp các module như Multer (upload file), JWT (xác thực), 
+và Bcrypt (mã hóa mật khẩu). 
+ 
+Database: PostgreSQL 
+● PostgreSQL là hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) mạnh mẽ, mã nguồn mở, 
+nổi tiếng về tính ổn định và khả năng mở rộng. 
+○ Trong hệ thống này, PostgreSQL sẽ được dùng để lưu trữ: 
+■ Thông tin người dùng: tài khoản, hồ sơ cá nhân, lịch sử hoạt động. 
+■ Tài liệu: tên, mô tả, file path, tag, môn học, trường học. 
+■ Đánh giá và bình luận: điểm số, nội dung comment, người đánh giá. 
+■ Lịch sử tải xuống và điểm (credit): ghi lại hoạt động của người dùng. 
+8. Vai trò phát triển 
+ 
+Contributor Nhóm chức năng chính Use Case phụ trách Mô tả công việc 
+chính 
+1 Giao diện người dùng (UI/UX, 
+React/Vue/NextJS) 
+- Đăng ký/Đăng nhập 
+- Tải lên tài liệu 
+- Xem chi tiết tài liệu 
+- Tải xuống tài liệu 
+Thiết kế, lập trình 
+giao diện các trang 
+chính (Auth, Upload, 
+Detail, Download). 
+Kết nối API, xử lý 
+hiển thị preview file, 
+thông báo lỗi, 
+loading, responsive 
+UI. 
+2 Xử lý logic và API chính 
+(Node.js, Express, hoặc 
+Django) 
+- Hệ thống 
+Credit/Điểm thưởng 
+- Theo dõi tác giả 
+Xây dựng các 
+endpoint RESTful 
+cho hệ thống điểm, 
+- Đánh giá & Bình 
+luận 
+đánh giá, và theo dõi. 
+Thiết kế cơ chế 
+cộng/trừ điểm và API 
+thông báo 
+(notification). 
+3 Thiết kế & tối ưu CSDL 
+(MySQL, MongoDB, 
+PostgreSQL) 
+- Tài liệu (Document 
+metadata) 
+- Quản lý tài khoản 
+- Báo cáo tài liệu vi 
+phạm 
+Thiết kế các bảng/tập 
+collection: Users, 
+Documents, Reports, 
+Comments, Credits. 
+Đảm bảo quan hệ 
+khóa ngoại, tối ưu 
+truy vấn tìm kiếm. 
+4 Tìm kiếm và quản lý hiển thị 
+dữ liệu 
+- Tìm kiếm tài liệu 
+- Đánh dấu tài liệu 
+yêu thích (Bookmark) 
+Xây dựng API tìm 
+kiếm (keyword, tag, 
+môn học, trường). 
+Làm giao diện hiển 
+thị kết quả, chức 
+năng lưu/hiển thị tài 
+liệu đã bookmark. 
+5 Chức năng quản lý và xử lý 
+nghiệp vụ người dùng 
+- Quản lý tài khoản 
+- Theo dõi tác giả 
+- Lịch sử tải xuống 
+Thiết kế dashboard 
+người dùng: thông tin 
+cá nhân, tài liệu đã 
+tải, tác giả đang theo 
+dõi, cập nhật hồ sơ. 
+Kết nối API backend 
+tương ứng. 
+6 Quản trị hệ thống & bảo mật - Quản trị hệ thống 
+- Báo cáo tài liệu vi 
+phạm 
+- Duyệt tài liệu 
+Tạo trang Admin 
+(dashboard): quản lý 
+user, phê duyệt tài 
+liệu mới, xử lý báo 
+cáo vi phạm. Thiết 
+lập phân quyền 
+(User/Moderator/Adm
+in). Đảm bảo bảo mật 
+và logging hệ thống. 
